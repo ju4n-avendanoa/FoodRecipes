@@ -44,7 +44,7 @@ function RecipeDetails() {
         <div className="flex gap-10 items-center justify-center px-4">
           <div className="flex flex-col justify-between">
             <span className="text-white text-center border border-gray-500 py-1.5 px-2 rounded-full mb-2">
-              {recipe?.calories.toFixed(0)}
+              {recipe?.calories.toFixed(0) / 10}
             </span>
 
             <p className="text-neutral-100 text-[12px] md:text-md">CALORIES</p>
