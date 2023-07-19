@@ -25,7 +25,7 @@ function Navbar() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/recipes">Explore</a>
+            <a href="/#recipes">Explore</a>
           </li>
           <li>
             <a href="/">Favorites</a>
