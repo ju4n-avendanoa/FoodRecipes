@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
+import { fetchRecipes } from "../utils";
 import Loading from "./Loading";
 import Searchbar from "./Searchbar";
-import { fetchRecipes } from "../utils";
 import RecipeCard from "./RecipeCard";
 
 function Recipes() {
@@ -33,11 +33,6 @@ function Recipes() {
     fetchRecipe();
   }, []);
 
-  const showMore = () => {
-    setLimit((prev) => prev + 10);
-    fetchRecipe();
-  };
-
   const handleSearchedRecipe = (e) => {
     e.preventDefault();
     fetchRecipe();
@@ -60,18 +55,10 @@ function Recipes() {
       </div>
       {recipes?.length > 0 ? (
         <>
-          <div className="w-full flex flex-wrap gap-10 px-0 lg:px-10 py-10">
+          <div className="w-full flex flex-wrap justify-center gap-10 px-0 lg:px-10 py-10">
             {recipes?.map((item, index) => (
               <RecipeCard recipe={item} key={index} />
             ))}
-          </div>
-          <div className="flex w-full  items-center justify-center py-10">
-            <button
-              className="bg-green-800 text-white px-3 py-1 rounded-full text-sm"
-              onClick={showMore}
-            >
-              Show more
-            </button>
           </div>
         </>
       ) : (

@@ -1,7 +1,6 @@
 function Button({
   isDisabled,
   containerStyle,
-  textStyle,
   title,
   rightIcon,
   handleClick,

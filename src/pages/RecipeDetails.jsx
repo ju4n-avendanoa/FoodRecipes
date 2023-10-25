@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchRecipe, fetchRecipes } from "../utils";
-import Loading from "../components/Loading";
-import Header from "../components/Header";
 import { AiFillPushpin } from "react-icons/ai";
 import { BsPatchCheck } from "react-icons/bs";
+import Loading from "../components/Loading";
+import Header from "../components/Header";
 import RecipeCard from "../components/RecipeCard";
 
 function RecipeDetails() {
@@ -13,6 +13,7 @@ function RecipeDetails() {
   const [loading, setLoading] = useState(false);
 
   const { id } = useParams();
+
   const getRecipe = async (id) => {
     setLoading(true);
     const { recipe } = await fetchRecipe(id);

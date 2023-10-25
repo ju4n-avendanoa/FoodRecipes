@@ -1,6 +1,5 @@
 import Header from "../components/Header";
 import Recipes from "../components/Recipes";
-import RecipeDetails from "./RecipeDetails";
 
 function Home() {
   return (

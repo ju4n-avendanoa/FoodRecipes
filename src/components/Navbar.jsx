@@ -1,7 +1,7 @@
-import Logo from "../images/logo.png";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
+import Logo from "../images/logo.png";
 import Button from "./Button";
 
 function Navbar() {
@@ -26,9 +26,6 @@ function Navbar() {
           </li>
           <li>
             <a href="/#recipes">Explore</a>
-          </li>
-          <li>
-            <a href="/">Favorites</a>
           </li>
         </ul>
         <Button

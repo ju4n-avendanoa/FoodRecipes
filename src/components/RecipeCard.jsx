@@ -1,9 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 function RecipeCard({ recipe }) {
-  const { label, cuisineType, image, dietLabel, mealType, uri } =
-    recipe?.recipe;
+  const { label, cuisineType, image, mealType, uri } = recipe.recipe;
 
   const id = uri?.split("#")[1];
 
